@@ -8,5 +8,9 @@ jobs:
       - uses: actions/checkout@v3
       - id: setup-jolie
         uses: kicito/setup-jolie@main
+        
+      - run: echo "$PATH"
+        shell: bash
+        
       - run: jolie
         shell: bash
