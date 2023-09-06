@@ -7,6 +7,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - id: setup-jolie
-        uses: kicito/setup-jolie@v1.0.1
+        uses: kicito/setup-jolie@main
       - run: jolie
         shell: bash
