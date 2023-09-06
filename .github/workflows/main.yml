@@ -3,10 +3,10 @@ on: [push]
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: Setup Jolie
     steps:
       - uses: actions/checkout@v3
       - id: setup-jolie
-        uses: kicito/setup-jolie@v1
+        uses: kicito/setup-jolie@v1.0.1
       - run: jolie
         shell: bash
