@@ -7,10 +7,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - id: setup-jolie
-        uses: kicito/setup-jolie@main
-        
-      - run: echo "$PATH"
-        shell: bash
-        
-      - run: jolie
+        name: Setup Jolie
+        uses: kicito/setup-jolie@v1
+      - id: run_jolie
+        name: Run Jolie
+        run: jolie main.ol
         shell: bash
