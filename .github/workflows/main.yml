@@ -21,7 +21,7 @@ jobs:
       - id: setup-jolie
         name: Setup Jolie
         uses: kicito/setup-jolie@main
-      - run: jpm -h
+      - run: jpm --help
   run_jot:
     runs-on: ubuntu-latest
     name: Test run jot
