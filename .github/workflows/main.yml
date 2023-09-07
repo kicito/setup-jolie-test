@@ -15,7 +15,7 @@ jobs:
         shell: bash
   run_jpm:
     runs-on: ubuntu-latest
-    name: Test run jot
+    name: Test run jpm
     steps:
       - uses: actions/checkout@v3
       - id: setup-jolie
