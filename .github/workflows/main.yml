@@ -1,9 +1,9 @@
 on: [push]
 
 jobs:
-  hello_world_job:
+  run_jolie:
     runs-on: ubuntu-latest
-    name: Setup Jolie
+    name: Test execute Jolie
     steps:
       - uses: actions/checkout@v3
       - id: setup-jolie
@@ -13,3 +13,19 @@ jobs:
         name: Run Jolie
         run: jolie main.ol
         shell: bash
+  run_jot:
+    runs-on: ubuntu-latest
+    name: Test run jot
+    steps:
+      - uses: actions/checkout@v3
+      - id: setup-jolie
+        name: Setup Jolie
+        uses: kicito/setup-jolie@v1
+      - id: setup-node
+        name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'npm'
+      - run: npm ci
+      - run: npm test
