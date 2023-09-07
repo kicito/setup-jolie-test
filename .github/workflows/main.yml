@@ -8,7 +8,7 @@ jobs:
       - uses: actions/checkout@v3
       - id: setup-jolie
         name: Setup Jolie
-        uses: kicito/setup-jolie@main
+        uses: jolie/setup-jolie@v1
       - id: run_jolie
         name: Run Jolie
         run: jolie main.ol
@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v3
       - id: setup-jolie
         name: Setup Jolie
-        uses: kicito/setup-jolie@main
+        uses: jolie/setup-jolie@v1
       - run: jpm --help
   run_jot:
     runs-on: ubuntu-latest
@@ -29,6 +29,6 @@ jobs:
       - uses: actions/checkout@v3
       - id: setup-jolie
         name: Setup Jolie
-        uses: kicito/setup-jolie@main
+        uses: jolie/setup-jolie@v1
       - run: npm ci
       - run: npm test
