@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/kicito/setup-jolie-test#readme",
   "dependencies": {
-    "@jolie/jot": "^0.0.24"
+    "@jolie/jot": "^0.0.25"
   },
   "jolie": {
     "dependencies": {},

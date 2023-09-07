@@ -21,11 +21,5 @@ jobs:
       - id: setup-jolie
         name: Setup Jolie
         uses: kicito/setup-jolie@v1
-      - id: setup-node
-        name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          cache: 'npm'
       - run: npm ci
-      - run: npm test
+      - run: npm test 
