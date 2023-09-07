@@ -30,7 +30,7 @@ service main( ) {
 				)
 				equals@assertions({
 					actual = 2
-					expected = 2
+					expected = 23
 				})()
 			}
 		} ]
