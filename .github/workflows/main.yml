@@ -13,6 +13,15 @@ jobs:
         name: Run Jolie
         run: jolie main.ol
         shell: bash
+  run_jpm:
+    runs-on: ubuntu-latest
+    name: Test run jot
+    steps:
+      - uses: actions/checkout@v3
+      - id: setup-jolie
+        name: Setup Jolie
+        uses: kicito/setup-jolie@v1
+      - run: jpm -h
   run_jot:
     runs-on: ubuntu-latest
     name: Test run jot
@@ -22,4 +31,4 @@ jobs:
         name: Setup Jolie
         uses: kicito/setup-jolie@v1
       - run: npm ci
-      - run: npm test 
+      - run: npm test
